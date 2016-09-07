@@ -1,0 +1,66 @@
+{{!-- This is the base layout for your project, and will be used on every page. --}}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head>
+  <link rel="stylesheet" type="text/css" href="css/app.css">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>{{subject}}</title>
+</head>
+
+<body>
+  <!-- <style> -->
+  <span class="preheader">{{description}}</span>
+  <header>
+    <img src="assets/img/DiscourseLogo.png" style="height: 40px; margin: auto; padding: 30px; margin-bottom: 200px">
+  </header>
+  <table class="body">
+    <tr>
+      <td class="center" align="center" valign="top">
+        <div style="background-color: #2F70AC; height: 400px; width: 100%;position: absolute; top: 100px; z-index: 0;">
+          <container style="background-color: #2F70AC; margin-top: 30px">
+            <div style="color:white">
+            <row>
+              <h3 class="text-center">Since your last visit</h3>
+            </row>
+            <spacer size="20"></spacer>
+            <row style="margin-bottom:20px">
+              <!--<columns small="0" large="1"></columns>-->
+              <columns small="3" large="3" class="large-offset-1">
+                <h1 class="text-center" style="color:white; margin-bottom:0px; font-size: 3em;"><strong>25</strong></h1>
+                <h4 class="text-center" style="color:white">New Topics</h4>
+              </columns>
+              <columns small="1" large="1"></columns>
+              <columns small="3" large="3">
+                <h1 class="text-center" style="color:white; margin-bottom:0px; font-size: 3em;"><strong>2</strong></h1>
+                <h4 class="text-center" style="color:white">Unread Messages</h4>
+              </columns>
+              <columns small="1" large="1"></columns>
+              <columns small="3" large="3">
+                <h1 class="text-center" style="color:white; margin-bottom:0px; font-size: 3em;"><strong>10</strong></h1>
+                <h4 class="text-center" style="color:white">Unread Notifications</h4>
+              </columns>
+              <columns small="0" large="1"></columns>
+            </row>
+            <row>
+              <h1 class="text-center">Popular Topics</h1>
+            </row>
+            </div>
+          </container>
+          <center>
+            {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened emails are created. --}} {{> body}}
+          </center>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <!-- prevent Gmail on iOS font size manipulation -->
+  <div style="display:none; white-space:nowrap; font:15px courier; line-height:0;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </div>
+</body>
+
+</html>
